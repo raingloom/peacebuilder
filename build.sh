@@ -1,7 +1,5 @@
 name=$1
 builddir=build
-cd ../..
-if [ -z $name ]; then
-	name=$(basename `pwd`)
-fi
-zip  "$build/$name.zip" -x $build -x .git* -r -i .
+! [ -d $builddir ] && mkdir $builddir
+[ -z $name ] && name=$(basename `pwd`)
+zip  "$builddir/$name.love" -x $builddir -x .git* -r *
