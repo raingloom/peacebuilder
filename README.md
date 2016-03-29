@@ -1,16 +1,19 @@
 # peacebuilder
 Build Löve projects in peace
 
-Project structure
+# Usage
+ - Have a project with the following structure:
+ - project
+  - build: this is a clone of this repo
+  - vendor: unmodified libraries, not to be included in the final `.love` file
+  - a bunch of other stuff
 
-- project
-  - vendor
-    - peacebuilder
-      - build.sh
-  - build
+run `bash build/build.sh` from `project`
 
-The vendor and build folders are automatically ignored, same goes for any .git* files and directories.
+done
+
+(for now)
 
 ## Planned:
-Cross platform builds
-Custom ignores
+ - Cross platform builds
+ - Custom ignores
